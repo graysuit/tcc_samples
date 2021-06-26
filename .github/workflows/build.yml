@@ -16,5 +16,6 @@ jobs:
       with:
         name: Releases
         path: |
-              'samples/*.exe'
-              'samples/*.dll'
+          samples/*.exe
+          samples/*.dll
+              
