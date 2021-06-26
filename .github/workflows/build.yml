@@ -10,3 +10,9 @@ jobs:
 
     - name: Build
       run: cmd.exe /c build.bat
+      
+    - name: Upload
+      uses: actions/upload-artifact@v2
+      with:
+        name: Releases
+        path: '**/*.exe'
