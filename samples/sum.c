@@ -8,7 +8,8 @@ int sum(a , b)
 
 int main(int argc, char **argv) 
 {
-	if (argc < 3) {
+	if (argc < 3) 
+	{
 		printf("usage: sum.exe num1 num2\n"
 			   "example: sum.exe 2 4\n");
 		return 1;
