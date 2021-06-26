@@ -15,4 +15,6 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Releases
-        path: 'samples/*.exe'
+        path: |
+              'samples/*.exe'
+              'samples/*.dll'
