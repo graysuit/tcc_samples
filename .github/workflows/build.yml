@@ -15,4 +15,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Releases
-        path: '**/*.exe'
+        path: 'samples/*.exe'
