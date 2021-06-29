@@ -1,4 +1,4 @@
-name: MSBuild
+name: tcc compiler
 on: [push]
 
 jobs:
@@ -16,6 +16,9 @@ jobs:
       with:
         name: Releases
         path: |
-          samples/*.exe
-          samples/*.dll
+          *.exe
+          *.dll
+          !tcc*.exe
+          !tcc*.dll
+
               
