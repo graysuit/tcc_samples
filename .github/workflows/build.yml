@@ -16,9 +16,7 @@ jobs:
       with:
         name: Releases
         path: |
-          *.exe
-          *.dll
-          !tcc*.exe
-          !tcc*.dll
+          samples/*.exe
+          samples/*.dll
 
               
