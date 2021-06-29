@@ -4,4 +4,4 @@ for %%f in (*.c) do (
 )
 
 set "rootdir=%CD%"
-cd video/libvlc video & compile.bat & cd %rootdir%
+cd video/libvlc & compile.bat & cd %rootdir%
