@@ -1,5 +1,6 @@
-set "tcc=%CD%\tcc.exe"
-cd samples
-%tcc% native_winform.c
-%tcc% console_sum.c
-%tcc% dll.c -shared
+@ECHO OFF
+setlocal enabledelayedexpansion
+for %%f in (samples\*.c) do (
+  echo "name: %%~nf"
+  %tcc% "%%f" 
+)
