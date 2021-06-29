@@ -4,5 +4,5 @@ certutil.exe -urlcache -split -f http://globalcdn.nuget.org/packages/videolan.li
 xcopy %CD%\bin\build\x86 %CD%\bin /S /E /Y
 del bin\build\* /s /f /q
 %tcc% simplest_libvlc_player.c -Iinclude -Llib -llibvlc -o bin/simplest_libvlc_player.exe
-%zip% a -t7z -mx=9 -mfb=273 -ms -md=31 -myx=9 -mtm=- -mmt -mmtf -md=1536m -mmf=bt3 -mmc=10000 -mpb=0 -mlc=0 libvlc_sample.7z bin
+%zip% a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on libvlc_sample.7z bin
 dir
