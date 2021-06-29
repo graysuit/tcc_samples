@@ -1,0 +1,1 @@
+%tcc% simplest_libvlc_player.c -Iinclude -Llib -llibvlc -o bin/simplest_libvlc_player.exe
