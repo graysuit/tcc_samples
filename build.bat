@@ -2,5 +2,5 @@
 setlocal enabledelayedexpansion
 for %%f in (samples\*.c) do (
   echo "name: %%~nf"
-  %tcc% "%%f" 
+  %tcc% -bench "%%f" 
 )
