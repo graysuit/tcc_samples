@@ -1,6 +1,8 @@
 @ECHO OFF
 setlocal enabledelayedexpansion
-for %%f in (samples\*.c) do (
-  echo "name: %%~nf"
-  %tcc% -bench "%%f" 
+set "tcc=%CD%/tcc.exe"
+cd samples
+for %%f in (*.c) do (
+  echo "name: %%~nf.c" 
+  %tcc% -bench "%%~nf.c" 
 )
