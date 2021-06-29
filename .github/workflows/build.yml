@@ -11,12 +11,17 @@ jobs:
     - name: Build
       run: cmd.exe /c build.bat 
       
-    - name: Upload
+    - name: Small Samples
       uses: actions/upload-artifact@v2
       with:
-        name: Releases
+        name: small_samples
         path: |
           samples/*.exe
           samples/*.dll
 
+    - name: Libvlc Sample
+      uses: actions/upload-artifact@v2
+      with:
+        name: small_samples
+        path: samples/video/libvlc/libvlc_sample.7z
               
