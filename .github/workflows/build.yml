@@ -19,9 +19,9 @@ jobs:
           samples/*.exe
           samples/*.dll
 
-    - name: Libvlc Sample
+    - name: Libvlc Samples
       uses: actions/upload-artifact@v2
       with:
-        name: small_samples
+        name: libvlc_samples
         path: samples/video/libvlc/libvlc_sample.7z
               
