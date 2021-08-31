@@ -7,12 +7,14 @@
 LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message) 
-	{
-        case WM_DESTROY:
-            PostQuitMessage(0);
+    {
+        case WM_CREATE:  //occurs when form created
+            break;
+        case WM_DESTROY:  //user clicked close button
+            PostQuitMessage(0); //close form
             break;
         default:
-            return DefWindowProc(hwnd, message, wParam, lParam);
+            return DefWindowProc(hwnd, message, wParam, lParam); //let it sunk
     }
     return 0;
 }
@@ -33,15 +35,14 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
     wc.hCursor       = LoadCursor(NULL, IDC_ARROW);
 
     if (FALSE == RegisterClass(&wc)) return 0;
-    HWND hwnd = CreateWindow(NAME, TITLE, WS_OVERLAPPEDWINDOW | WS_VISIBLE, CW_USEDEFAULT, CW_USEDEFAULT, 360, 240, 0, 0, hInstance, 0);
-    
-	if (NULL == hwnd) return 0;
 	
-	while (GetMessage(&msg, NULL, 0, 0) > 0) 
-	{
+    HWND hwnd = CreateWindow(NAME, TITLE, WS_OVERLAPPEDWINDOW | WS_VISIBLE, CW_USEDEFAULT, CW_USEDEFAULT, 360, 240, 0, 0, hInstance, 0); //Create form
+    if (NULL == hwnd) return 0;
+	
+    while (GetMessage(&msg, NULL, 0, 0) > 0) 
+    {
         TranslateMessage(&msg);
         DispatchMessage(&msg);
     }
-
     return msg.wParam;
 }
